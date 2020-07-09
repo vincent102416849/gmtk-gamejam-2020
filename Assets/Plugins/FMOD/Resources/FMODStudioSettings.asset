@@ -15,8 +15,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../../../../Volumes/AUDIO DRIVE/Dropbox/GMTK_FMOD/GMTK_FMOD.fspro
-  sourceBankPath: ../../../../../Volumes/AUDIO DRIVE/Dropbox/GMTK_FMOD/Build
+  sourceProjectPath: FMOD/GMTK_FMOD/GMTK_FMOD.fspro
+  sourceBankPath: FMOD/GMTK_FMOD/Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -58,7 +58,9 @@ MonoBehaviour:
     Value: 0
   - Platform: 20
     Value: 0
-  BankDirectorySettings: []
+  BankDirectorySettings:
+  - Platform: 2
+    Value: Desktop
   VirtualChannelSettings:
   - Platform: 1
     Value: 1024
