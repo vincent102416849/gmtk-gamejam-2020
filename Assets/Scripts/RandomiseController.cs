@@ -5,19 +5,28 @@ using UnityEngine;
 
 public class RandomiseController : MonoBehaviour
 {
+    public TextMeshProUGUI countDownText;
     public TextMeshProUGUI debugText;
     public List<float> preconfiguredPower;
 
     public Player player;
     public float randomiseTime;
+    public float countDown;
 
     IEnumerator Start()
     {
         while (true)
         {
             Randomise();
+            countDown = randomiseTime;
             yield return new WaitForSeconds(randomiseTime);
         }
+    }
+
+    private void Update()
+    {
+        countDown -= Time.deltaTime;
+        countDownText.SetText($"{countDown:0}");
     }
 
     public void Randomise()
