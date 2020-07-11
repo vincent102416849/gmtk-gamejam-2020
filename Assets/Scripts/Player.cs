@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     {
         UpdateHealth(-attackData.strength);
         OnReceiveAttact.Invoke(attackData);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerDamage");
     }
 
     public void UpdateHealth(float healthDelta)
