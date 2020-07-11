@@ -17,7 +17,7 @@ MonoBehaviour:
   lastModified: 637300772025548673
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4317813121094115732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMODBuild/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637300772025558644
+  lastModified: 637300849311968173
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -108,16 +108,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -4138502611166313235}
-  - {fileID: -4646036887674348362}
+  - {fileID: 4749281105971746644}
   EditorEvents:
   - {fileID: 7063868954211952752}
   - {fileID: 3642843537887487548}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -4646036887674348362}
+  - {fileID: 4749281105971746644}
   StringsBanks:
   - {fileID: -4138502611166313235}
-  stringsBankWriteTime: 637300772025558644
+  stringsBankWriteTime: 637300849311968173
   cacheVersion: 3
 --- !u!114 &1126970581474369869
 MonoBehaviour:
@@ -152,7 +152,7 @@ MonoBehaviour:
   Path: event:/Music
   guid: 08609c959c91c842b4a4a336da3dae50
   Banks:
-  - {fileID: -4646036887674348362}
+  - {fileID: 4749281105971746644}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -175,6 +175,24 @@ MonoBehaviour:
   Path: Assets/FMODBuild/Desktop/Master.bank
   SubDir: 
   lastModified: 637299267544318768
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &4749281105971746644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMODBuild/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637300849311958213
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -230,7 +248,7 @@ MonoBehaviour:
   guid: ef4f672d74e743409d58237ca71e3e23
   Banks:
   - {fileID: 5106162393654152132}
-  - {fileID: -4646036887674348362}
+  - {fileID: 4749281105971746644}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
