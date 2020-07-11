@@ -5,14 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class LoadingScene : MonoBehaviour
 {
-    
-
-    void Start()
+    IEnumerator Start()
     {
-        if (FMODUnity.RuntimeManager.HasBankLoaded("Master Bank"))
+        while (true)
         {
-            Debug.Log("Master Bank Loaded");
-            SceneManager.LoadScene("Room_1", LoadSceneMode.Single);
+            if (FMODUnity.RuntimeManager.HasBankLoaded("Master"))
+            {
+                Debug.Log("Master Bank Loaded");
+                SceneManager.LoadScene("Room_1", LoadSceneMode.Single);
+            }
+            yield return new WaitForSeconds(0.5f);
         }
     }
 
