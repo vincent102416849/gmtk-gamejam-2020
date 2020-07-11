@@ -4,17 +4,43 @@ using UnityEngine;
 
 public class EnemySensorDetector : MonoBehaviour
 {
+    [Header("Display")]
+    public List<GameObject> targetGOList;
+
+    [Header("Param")]
+    public TagEnum targetTag;
+
+    [Header("Config")]
+    public Enemy enemy;
     public SphereCollider sphereCollider;
 
-    // Start is called before the first frame update
+    [Header("Event")]
+    public GameEvent OnDetectPlayer;
+
     void Start()
     {
-        
+        UpdateValues();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateValues()
     {
-        
+        sphereCollider.radius = enemy.detectRange;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag(targetTag.ToString()))
+        {
+            targetGOList.Add(other.gameObject);
+            OnDetectPlayer.Invoke(this);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag(targetTag.ToString()))
+        {
+            targetGOList.Add(other.gameObject);
+        }
     }
 }
