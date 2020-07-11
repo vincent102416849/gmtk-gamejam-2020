@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RandomiseController : MonoBehaviour
 {
+    public List<float> preconfiguredPower;
+
     public Player player;
     public float randomiseTime;
 
@@ -18,8 +20,9 @@ public class RandomiseController : MonoBehaviour
 
     public void Randomise()
     {
-        //player.health = Random.Range(1f, 10f);
-        player.attackPower = Random.Range(1f, 5f);
+        var power = preconfiguredPower[Random.Range(0, preconfiguredPower.Count)];
+        player.attackPower = power;
         player.moveSpeed = Random.Range(2f, 8f);
+        print($"Randomise\nplayer.attackPower:{player.attackPower}\nplayer.moveSpeed:{player.moveSpeed }");
     }
 }
