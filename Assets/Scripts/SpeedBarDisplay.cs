@@ -12,7 +12,6 @@ public class SpeedBarDisplay : MonoBehaviour
     void Update()
     {
         var value = Mathf.CeilToInt(player.moveSpeed);
-        print(value);
         speedAmountImage.sprite = speedAmountSpriteList[value];
     }
 }
