@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
 
     public void UpdateHealth(float healthDelta)
     {
-        print($"Enemy UpdateHealth {healthDelta}");
+        print($"Player UpdateHealth {healthDelta}");
         health += healthDelta;
         health = Mathf.Clamp(health, 0f, 10f);
         if (Mathf.Approximately(health, 0f))
