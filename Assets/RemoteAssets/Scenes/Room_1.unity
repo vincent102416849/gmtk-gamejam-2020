@@ -3452,6 +3452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6bc52b41a3c06944b0a20428f53ab0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentCoolDown: 0
   player: {fileID: 5428744422844693051}
   playerSwordDetector: {fileID: 5428744422261170080}
   OnAttack:
@@ -3473,6 +3474,7 @@ MonoBehaviour:
   health: 10
   moveSpeed: 5
   attackRange: 1
+  attackCooldown: 0.6
   OnHpZero:
     m_PersistentCalls:
       m_Calls:
