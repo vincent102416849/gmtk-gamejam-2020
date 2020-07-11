@@ -24,6 +24,7 @@ public class PlayerSpawnController : MonoBehaviour
     {
         yield return new WaitForSeconds(respawnDelay);
         var spawnTransform = spawnPointList[Random.Range(0, spawnPointList.Count)];
+        player.GetComponent<Player>().health = 10f;
         player.transform.position = spawnTransform.position;
         player.gameObject.SetActive(true);
     }
