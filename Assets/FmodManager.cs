@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class FmodManager : MonoBehaviour
 {
-
-    // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        if (FMODUnity.RuntimeManager.HasBankLoaded("Master"))
+        while (!FMODUnity.RuntimeManager.HasBankLoaded("Master"))
         {
-            Debug.Log("Master");
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Music");
-          
+            Debug.Log("Trying to load master");
+            yield return new WaitForSeconds(0.5f);
         }
-
-
-
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Music");
     }
 }
