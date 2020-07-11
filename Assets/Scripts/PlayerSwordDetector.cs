@@ -10,7 +10,6 @@ public class PlayerSwordDetector : MonoBehaviour
     [Header("Param")]
     public TagEnum targetTag;
     
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(targetTag.ToString()))

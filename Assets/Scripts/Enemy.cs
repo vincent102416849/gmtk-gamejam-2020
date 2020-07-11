@@ -10,12 +10,13 @@ public class Enemy : MonoBehaviour
 
     [Header("Event")]
     public GameEvent OnHpZero;
-    public GameEvent OnFallBack;
+    public GameEvent OnReceiveAttact;
 
     public void ReceiveAttack(AttackData attackData)
     {
         print($"Enemy ReceiveAttack");
         UpdateHealth(-attackData.strength);
+        OnReceiveAttact.Invoke(attackData);
     }
 
     public void UpdateHealth(float healthDelta)

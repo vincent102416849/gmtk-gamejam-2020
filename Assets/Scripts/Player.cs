@@ -8,15 +8,23 @@ public class Player : MonoBehaviour
     public float moveSpeed;
     public float attackRange;
 
-    // Start is called before the first frame update
-    void Start()
+    [Header("Event")]
+    public GameEvent OnHpZero;
+    public GameEvent OnReceiveAttact;
+
+    public void ReceiveAttack(AttackData attackData)
     {
-        
+        print($"Player ReceiveAttack");
+        UpdateHealth(-attackData.strength);
+        OnReceiveAttact.Invoke(attackData);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateHealth(float healthDelta)
     {
-        
+        print($"Enemy UpdateHealth {healthDelta}");
+        health += healthDelta;
+        health = Mathf.Clamp(health, 0f, 10f);
+        if (Mathf.Approximately(health, 0f))
+            OnHpZero.Invoke(this);
     }
 }
