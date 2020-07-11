@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class RandomiseController : MonoBehaviour
 {
+    public TextMeshProUGUI debugText;
     public List<float> preconfiguredPower;
 
     public Player player;
@@ -22,7 +24,7 @@ public class RandomiseController : MonoBehaviour
     {
         var power = preconfiguredPower[Random.Range(0, preconfiguredPower.Count)];
         player.attackPower = power;
-        player.moveSpeed = Random.Range(2f, 8f);
-        print($"Randomise\nplayer.attackPower:{player.attackPower}\nplayer.moveSpeed:{player.moveSpeed }");
+        player.moveSpeed = (int) Random.Range(2f, 8f);
+        debugText.SetText($"Randomise\nplayer.attackPower:{player.attackPower:0}\nplayer.moveSpeed:{player.moveSpeed }");
     }
 }
