@@ -326,7 +326,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b2d0431fc555d7a46b06ba98d490398e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a9f0497e0710b4856a09e14334a9dccb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -523,7 +523,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467652850}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f8d80f47a9cdf7489505a5935da9fa5, type: 3}
   m_Name: 
@@ -1434,16 +1434,16 @@ MonoBehaviour:
   hpAmountImage: {fileID: 1887828649}
   hpAmountSpriteList:
   - {fileID: 21300000, guid: 21bf049747de7a74695827e269ed9908, type: 3}
-  - {fileID: 21300000, guid: b5163dc523d9d3347b9b2fa878953eb7, type: 3}
-  - {fileID: 21300000, guid: 05eeef94a4a35ca41acbd562e297045b, type: 3}
-  - {fileID: 21300000, guid: 67661a2797f753943b94a2d4910f0095, type: 3}
-  - {fileID: 21300000, guid: cda400fd4b6e97d48b4ad830f8bce132, type: 3}
-  - {fileID: 21300000, guid: 06473283ef962f14a8c9373b31f7dac0, type: 3}
-  - {fileID: 21300000, guid: 238f0b2fe4661284aab889b9d4319559, type: 3}
-  - {fileID: 21300000, guid: 3f24d6b475d2bdd4994331a78c17fba0, type: 3}
-  - {fileID: 21300000, guid: a28f20c9a8dfb8347a9a2cea297f070c, type: 3}
-  - {fileID: 21300000, guid: e969f8da0de811f4eb6d2203c8403c2d, type: 3}
-  - {fileID: 21300000, guid: fa8b8078a0ba52f4e9b080a3633f97f1, type: 3}
+  - {fileID: 21300000, guid: 21c7b5e547717447a83395b34e3cdbc3, type: 3}
+  - {fileID: 21300000, guid: 1318af60150be46f1992e75d44163e91, type: 3}
+  - {fileID: 21300000, guid: 9734e92141fa740a3b798301afd12d64, type: 3}
+  - {fileID: 21300000, guid: 295895cca912144558fa9034102ba76f, type: 3}
+  - {fileID: 21300000, guid: fda21f128e2424d68aa590e74f3762fe, type: 3}
+  - {fileID: 21300000, guid: 441e79b5d67104e939cceb6ff693b6f8, type: 3}
+  - {fileID: 21300000, guid: e408442b5cbac41a881e0a60a8894b98, type: 3}
+  - {fileID: 21300000, guid: 9b4274cedcf1042b387decfea3019702, type: 3}
+  - {fileID: 21300000, guid: 022e5709a51044fe1a009a9532ae04e5, type: 3}
+  - {fileID: 21300000, guid: 165358eb92d364c0399f618fa6d7d8d4, type: 3}
 --- !u!1 &1054309686
 GameObject:
   m_ObjectHideFlags: 0
@@ -2592,6 +2592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0af0d15f52cc144a0c7609178a20cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackPower: 0
   health: 10
   moveSpeed: 5
   attackRange: 1

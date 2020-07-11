@@ -18,7 +18,8 @@ public class RandomiseController : MonoBehaviour
 
     public void Randomise()
     {
-        player.health = Random.Range(1f, 10f);
+        //player.health = Random.Range(1f, 10f);
+        player.attackPower = Random.Range(1f, 5f);
         player.moveSpeed = Random.Range(2f, 8f);
     }
 }

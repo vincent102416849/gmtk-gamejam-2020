@@ -14,7 +14,6 @@ public class Enemy : MonoBehaviour
 
     public void ReceiveAttack(AttackData attackData)
     {
-        print($"Enemy ReceiveAttack");
         UpdateHealth(-attackData.strength);
         OnReceiveAttact.Invoke(attackData);
     }

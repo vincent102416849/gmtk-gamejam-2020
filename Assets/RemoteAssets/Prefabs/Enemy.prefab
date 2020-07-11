@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a33660ad7b7bcb49a9cfbce53d0786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 5
   moveSpeed: 5
   detectRange: 2
   OnHpZero:
