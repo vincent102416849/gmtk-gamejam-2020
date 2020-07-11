@@ -27,6 +27,8 @@ public class EnemyMovementController : MonoBehaviour
     public void DetectedPlayer()
     {
         OnSuprise.Invoke(this);
+        if (enemyRoutine != null)
+            StopCoroutine(enemyRoutine);
         enemyRoutine = StartCoroutine(HuntingPlayerLoop());
     }
 
@@ -51,7 +53,9 @@ public class EnemyMovementController : MonoBehaviour
             }
             else
             {
+                rigidbody.velocity = Vector2.zero;
                 var attackData = new AttackData() { fallBack = 1f, fromPosition = transform.position, magic = 1f, strength = 1f };
+                print($"Enemy attacking {gameObject.name}");
                 target.GetComponent<Player>().ReceiveAttack(attackData);
                 yield return new WaitForSeconds(1f);
             }

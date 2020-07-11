@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3c1610107d8784e81fe798664a74a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRangeThreshold: 1
+  attackRangeThreshold: 1.1
   enemy: {fileID: 7280102667770831417}
   rigidbody: {fileID: 3998169729902350037}
   enemySensorDetector: {fileID: 7280102668937971602}
@@ -98,7 +98,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.9, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3998169729902350037
 Rigidbody:
