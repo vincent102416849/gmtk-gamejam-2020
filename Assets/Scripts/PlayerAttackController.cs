@@ -6,16 +6,21 @@ public class PlayerAttackController : MonoBehaviour
 {
     [Header("Config")]
     public Player player;
+    public PlayerSwordDetector playerSwordDetector;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Event")]
+    public GameEvent OnAttack;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            foreach (var enemyGO in playerSwordDetector.targetGOList)
+            {
+                var attackData = new AttackData() { fallBack = 1f, fromPosition = transform.position, magic = 1f, strength = 1f };
+                enemyGO.GetComponent<Enemy>().ReceiveAttack(attackData);
+            }
+            OnAttack.Invoke(this);
+        }
     }
 }
