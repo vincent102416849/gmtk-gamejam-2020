@@ -12,5 +12,6 @@ public class FmodManager : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
         FMODUnity.RuntimeManager.PlayOneShot("event:/Music");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Ambience");
     }
 }
