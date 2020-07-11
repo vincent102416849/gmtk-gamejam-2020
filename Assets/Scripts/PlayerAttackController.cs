@@ -22,7 +22,7 @@ public class PlayerAttackController : MonoBehaviour
             }
             OnAttack.Invoke(this);
 
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Player Attack");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerAttack");
         }
     }
 }
