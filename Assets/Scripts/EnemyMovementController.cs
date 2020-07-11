@@ -61,4 +61,31 @@ public class EnemyMovementController : MonoBehaviour
             yield return null;
         }
     }
+
+    public void Knockback(object attackDataObj)
+    {
+        Knockback(attackDataObj as AttackData);
+    }
+
+    public void Knockback(AttackData attackData)
+    {
+        if (!gameObject.activeSelf)
+            return;
+        if (enemyRoutine != null)
+            StopCoroutine(enemyRoutine);
+        enemyRoutine = StartCoroutine(KnockbackLoop(attackData));
+    }
+
+    IEnumerator KnockbackLoop(AttackData attackData)
+    {
+        var fallBack = attackData.fallBack;
+        var direction = (transform.position - attackData.fromPosition).normalized;
+        rigidbody.velocity = direction * fallBack;
+        while (rigidbody.velocity.magnitude > 0f)
+        {
+            rigidbody.velocity = Vector3.MoveTowards(rigidbody.velocity, Vector3.zero, Time.deltaTime * 3f);
+            yield return null;
+        }
+        enemyRoutine = StartCoroutine(HuntingPlayerLoop());
+    }
 }
