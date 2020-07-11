@@ -12,10 +12,10 @@ public class EnemySpawnController : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(spawnDelay);
             var spawnTransform = enemySpawnPointList[Random.Range(0, enemySpawnPointList.Count)];
             var newEnemy = Instantiate(enemyPrefab);
             newEnemy.transform.position = spawnTransform.position;
+            yield return new WaitForSeconds(spawnDelay);
         }
     }
 }

@@ -53,6 +53,7 @@ public class EnemyMovementController : MonoBehaviour
             {
                 var attackData = new AttackData() { fallBack = 1f, fromPosition = transform.position, magic = 1f, strength = 1f };
                 target.GetComponent<Player>().ReceiveAttack(attackData);
+                yield return new WaitForSeconds(1f);
             }
             yield return null;
         }
