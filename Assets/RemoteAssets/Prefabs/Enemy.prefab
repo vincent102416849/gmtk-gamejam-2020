@@ -67,7 +67,18 @@ MonoBehaviour:
         m_CallState: 2
   OnReceiveAttact:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2177765974882360660}
+        m_MethodName: Knockback
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2177765974882360660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,7 +169,7 @@ GameObject:
   - component: {fileID: 7280102668937971604}
   - component: {fileID: 7280102668937971602}
   - component: {fileID: 7280102668937971603}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: EnemySensorDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}

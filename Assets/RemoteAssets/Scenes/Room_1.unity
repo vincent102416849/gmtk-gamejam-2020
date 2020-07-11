@@ -3412,7 +3412,7 @@ GameObject:
   - component: {fileID: 5428744422261170082}
   - component: {fileID: 5428744422261170081}
   - component: {fileID: 5428744422261170080}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: PlayerSwordDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
