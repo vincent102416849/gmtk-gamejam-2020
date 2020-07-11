@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public float attackPower;
     public float health;
     public float moveSpeed;
     public float attackRange;
@@ -14,7 +15,6 @@ public class Player : MonoBehaviour
 
     public void ReceiveAttack(AttackData attackData)
     {
-        print($"Player ReceiveAttack");
         UpdateHealth(-attackData.strength);
         OnReceiveAttact.Invoke(attackData);
     }

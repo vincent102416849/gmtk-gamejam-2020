@@ -55,7 +55,6 @@ public class EnemyMovementController : MonoBehaviour
             {
                 rigidbody.velocity = Vector2.zero;
                 var attackData = new AttackData() { fallBack = 1f, fromPosition = transform.position, magic = 1f, strength = 1f };
-                print($"Enemy attacking {gameObject.name}");
                 target.GetComponent<Player>().ReceiveAttack(attackData);
                 yield return new WaitForSeconds(1f);
             }
