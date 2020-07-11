@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     {
         UpdateHealth(-attackData.strength);
         OnReceiveAttact.Invoke(attackData);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/EnemyDamage");
     }
 
     public void UpdateHealth(float healthDelta)

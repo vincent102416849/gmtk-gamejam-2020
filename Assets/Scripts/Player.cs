@@ -26,6 +26,10 @@ public class Player : MonoBehaviour
         health += healthDelta;
         health = Mathf.Clamp(health, 0f, 10f);
         if (Mathf.Approximately(health, 0f))
+        {
             OnHpZero.Invoke(this);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerDeath");
+        }
+        
     }
 }
