@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        var horizontal = Input.GetAxis("Horizontal");
-        var vertical = Input.GetAxis("Vertical");
+        var horizontal = Input.GetAxisRaw("Horizontal");
+        var vertical = Input.GetAxisRaw("Vertical");
         var delta = new Vector3(horizontal, vertical, 0f) * moveSpeed;
         rigidbody.velocity = delta;
     }
