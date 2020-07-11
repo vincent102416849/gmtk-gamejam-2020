@@ -13,7 +13,7 @@ public class PlayerAttackController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
             foreach (var enemyGO in playerSwordDetector.targetGOList)
             {
