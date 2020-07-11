@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class RandomiseController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Player player;
+    public float randomiseTime;
+
+    IEnumerator Start()
     {
-        
+        while (true)
+        {
+            Randomise();
+            yield return new WaitForSeconds(randomiseTime);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Randomise()
     {
-        
+        player.health = Random.Range(1f, 10f);
+        player.moveSpeed = Random.Range(2f, 8f);
     }
 }
