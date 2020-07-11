@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public float health;
     public float moveSpeed;
     public float attackRange;
+    public float attackCooldown;
 
     [Header("Event")]
     public GameEvent OnHpZero;
