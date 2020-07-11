@@ -831,7 +831,7 @@ MonoBehaviour:
   - 2.5
   - 5
   player: {fileID: 5428744422844693051}
-  randomiseTime: 5
+  randomiseTime: 10
   countDown: 0
 --- !u!4 &467652852
 Transform:
