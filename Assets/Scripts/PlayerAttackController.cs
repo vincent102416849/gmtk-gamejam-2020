@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerAttackController : MonoBehaviour
 {
-    public float health;
-    public float moveSpeed;
-    public float attackRange;
+    [Header("Config")]
+    public Player player;
 
     // Start is called before the first frame update
     void Start()
