@@ -27,5 +27,6 @@ public class PlayerSpawnController : MonoBehaviour
         player.GetComponent<Player>().health = 10f;
         player.transform.position = spawnTransform.position;
         player.gameObject.SetActive(true);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerSpawn");
     }
 }
