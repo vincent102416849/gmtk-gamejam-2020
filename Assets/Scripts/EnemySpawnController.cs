@@ -16,7 +16,7 @@ public class EnemySpawnController : MonoBehaviour
             var trial = 10;
             RESPAWN:
             var spawnTransform = enemySpawnPointList[Random.Range(0, enemySpawnPointList.Count)];
-            var hits = Physics.OverlapSphere(spawnTransform.position, 0.5f, LayerMask.GetMask("Enemy"));
+            var hits = Physics.OverlapSphere(spawnTransform.position, 0.1f, LayerMask.GetMask("Enemy"));
             if (trial-- > 0 && hits.Count() > 0)
                 goto RESPAWN;
 
