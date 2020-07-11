@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMODBuild/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637300849311968173
+  lastModified: 637300830780000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -108,16 +108,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -4138502611166313235}
-  - {fileID: 4749281105971746644}
+  - {fileID: 1219648072206022950}
   EditorEvents:
   - {fileID: 7063868954211952752}
   - {fileID: 3642843537887487548}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 4749281105971746644}
+  - {fileID: 1219648072206022950}
   StringsBanks:
   - {fileID: -4138502611166313235}
-  stringsBankWriteTime: 637300849311968173
+  stringsBankWriteTime: 637300830780000000
   cacheVersion: 3
 --- !u!114 &1126970581474369869
 MonoBehaviour:
@@ -137,6 +137,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &1219648072206022950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMODBuild/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637300830780000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &3642843537887487548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,7 +170,7 @@ MonoBehaviour:
   Path: event:/Music
   guid: 08609c959c91c842b4a4a336da3dae50
   Banks:
-  - {fileID: 4749281105971746644}
+  - {fileID: 1219648072206022950}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -195,7 +213,7 @@ MonoBehaviour:
   lastModified: 637300849311958213
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &5106162393654152132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,7 +266,7 @@ MonoBehaviour:
   guid: ef4f672d74e743409d58237ca71e3e23
   Banks:
   - {fileID: 5106162393654152132}
-  - {fileID: 4749281105971746644}
+  - {fileID: 1219648072206022950}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
