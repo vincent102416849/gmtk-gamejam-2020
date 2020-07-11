@@ -21,6 +21,8 @@ public class PlayerAttackController : MonoBehaviour
                 enemyGO?.GetComponent<Enemy>().ReceiveAttack(attackData);
             }
             OnAttack.Invoke(this);
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Player Attack");
         }
     }
 }
