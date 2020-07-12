@@ -137,7 +137,7 @@ TextureImporter:
         serializedVersion: 2
         x: 42
         y: 6
-        width: 78
+        width: 87
         height: 108
       alignment: 9
       pivot: {x: 0.6149257, y: 0.42839035}
@@ -156,7 +156,7 @@ TextureImporter:
       name: Hero_LeftAttack_Sheet_2
       rect:
         serializedVersion: 2
-        x: 120
+        x: 129
         y: 6
         width: 69
         height: 108
@@ -177,7 +177,7 @@ TextureImporter:
       name: Hero_LeftAttack_Sheet_3
       rect:
         serializedVersion: 2
-        x: 189
+        x: 198
         y: 0
         width: 63
         height: 114
