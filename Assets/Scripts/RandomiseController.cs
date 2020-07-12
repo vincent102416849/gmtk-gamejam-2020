@@ -35,5 +35,6 @@ public class RandomiseController : MonoBehaviour
         player.attackPower = power;
         player.moveSpeed = (int) Random.Range(2f, 8f);
         debugText.SetText($"Randomise\nplayer.attackPower:{player.attackPower:0}\nplayer.moveSpeed:{player.moveSpeed }");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/StatsReset");
     }
 }
