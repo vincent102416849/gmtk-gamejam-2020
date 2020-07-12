@@ -14,7 +14,6 @@ public class LandingScene : MonoBehaviour
 
     public void Play()
     {
-        print($"akaCK1");
         SceneManager.LoadScene($"MainGame");
     }
 
