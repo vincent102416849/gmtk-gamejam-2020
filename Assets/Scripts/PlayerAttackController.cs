@@ -10,6 +10,7 @@ public class PlayerAttackController : MonoBehaviour
     [Header("Config")]
     public Player player;
     public PlayerSwordDetector playerSwordDetector;
+    public Animator animator;
 
     [Header("Event")]
     public GameEvent OnAttack;
@@ -29,6 +30,7 @@ public class PlayerAttackController : MonoBehaviour
                     enemyGO.GetComponent<Enemy>().ReceiveAttack(attackData);
             }
             currentCoolDown = player.attackCooldown;
+            animator.Play("Hero_FrontAttack");
             OnAttack.Invoke(this);
 
             FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerAttack");

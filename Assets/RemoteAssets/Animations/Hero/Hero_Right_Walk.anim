@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Hero_FrontWalk
+  m_Name: Hero_Right_Walk
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -22,17 +22,17 @@ AnimationClip:
     - time: 0
       value: {fileID: -5332559391703603027, guid: 37a28be6d6eded94ab795197c47e76b5,
         type: 3}
-    - time: 0.083333336
+    - time: 0.33333334
       value: {fileID: -6835107455609529457, guid: 37a28be6d6eded94ab795197c47e76b5,
         type: 3}
-    - time: 0.16666667
+    - time: 0.6666667
       value: {fileID: 364030229884050386, guid: 37a28be6d6eded94ab795197c47e76b5,
         type: 3}
-    - time: 0.25
+    - time: 1
       value: {fileID: 2679062440795063488, guid: 37a28be6d6eded94ab795197c47e76b5,
         type: 3}
     attribute: m_Sprite
-    path: 
+    path: PlayerAsset/PlayerSprite
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 12
@@ -43,7 +43,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
+      path: 3563067159
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -59,7 +59,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.33333334
+    m_StopTime: 1.0833334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
