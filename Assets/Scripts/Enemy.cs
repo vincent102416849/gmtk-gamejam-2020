@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [Header("Event")]
+    [Header("Display")]
+    public Orientation orientation;
     public bool isDead;
 
     [Header("Param")]
