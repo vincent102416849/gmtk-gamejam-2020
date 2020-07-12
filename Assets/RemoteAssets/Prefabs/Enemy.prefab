@@ -100,6 +100,7 @@ MonoBehaviour:
   enemy: {fileID: 7280102667770831417}
   rigidbody: {fileID: 3998169729902350037}
   enemySensorDetector: {fileID: 7280102668937971602}
+  enemyAnimationController: {fileID: 3812598677584919970}
   OnSuprise:
     m_PersistentCalls:
       m_Calls: []

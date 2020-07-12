@@ -3394,7 +3394,7 @@ MonoBehaviour:
   currentCoolDown: 0
   player: {fileID: 5428744422844693051}
   playerSwordDetector: {fileID: 5428744422261170080}
-  playerAnimationController: {fileID: 0}
+  playerAnimationController: {fileID: 5428744422844692993}
   OnAttack:
     m_PersistentCalls:
       m_Calls: []

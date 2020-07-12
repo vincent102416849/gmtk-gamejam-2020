@@ -16,6 +16,7 @@ public class EnemyMovementController : MonoBehaviour
     public Enemy enemy;
     public new Rigidbody rigidbody;
     public EnemySensorDetector enemySensorDetector;
+    public EnemyAnimationController enemyAnimationController;
 
     [Header("Event")]
     public GameEvent OnSuprise;
@@ -75,6 +76,7 @@ public class EnemyMovementController : MonoBehaviour
     public void Knockback(object attackDataObj)
     {
         Knockback(attackDataObj as AttackData);
+        enemyAnimationController.BeginAttacked();
     }
 
     public void Knockback(AttackData attackData)
