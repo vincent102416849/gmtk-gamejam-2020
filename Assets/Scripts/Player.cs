@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("Display")]
+    public bool isDead;
+
+    [Header("Param")]
     public float attackPower;
     public float health;
     public float moveSpeed;
@@ -16,6 +20,8 @@ public class Player : MonoBehaviour
 
     public void ReceiveAttack(AttackData attackData)
     {
+        if (isDead)
+            return;
         UpdateHealth(-attackData.strength);
         OnReceiveAttact.Invoke(attackData);
         FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerDamage");
@@ -32,5 +38,11 @@ public class Player : MonoBehaviour
             FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerDeath");
         }
         
+    }
+
+    public void Die()
+    {
+        isDead = true;
+        gameObject.SetActive(false);
     }
 }
