@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: a1732d52dd1db8546bfa288cbed680a9
+guid: 6859ee0120fb34fb08688dc40e49da7c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3123570118369471962
-    second: Hero_BackAttack_Sheet_0
+      213: 760992136938442062
+    second: Enemy_Attack_Back_0
   - first:
-      213: 206304975850422353
-    second: Hero_BackAttack_Sheet_1
+      213: -9007776955462133657
+    second: Enemy_Attack_Back_1
   - first:
-      213: -560368573403574373
-    second: Hero_BackAttack_Sheet_2
-  - first:
-      213: 5120697079305858184
-    second: Hero_BackAttack_Sheet_3
+      213: -2231543325269351374
+    second: Enemy_Attack_Back_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,13 +108,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hero_BackAttack_Sheet_0
+      name: Enemy_Attack_Back_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 87
-        height: 111
+        y: 3
+        width: 45
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +122,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6221097d689d6a4d0800000000000000
-      internalID: -3123570118369471962
+      spriteID: e4dc41f01569f8a00800000000000000
+      internalID: 760992136938442062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hero_BackAttack_Sheet_1
+      name: Enemy_Attack_Back_1
       rect:
         serializedVersion: 2
-        x: 87
-        y: 0
-        width: 75
-        height: 111
+        x: 45
+        y: 3
+        width: 48
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 150c5f05841fcd200800000000000000
-      internalID: 206304975850422353
+      spriteID: 768dab19592fdf280800000000000000
+      internalID: -9007776955462133657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hero_BackAttack_Sheet_2
+      name: Enemy_Attack_Back_2
       rect:
         serializedVersion: 2
-        x: 162
+        x: 93
         y: 0
-        width: 75
-        height: 111
+        width: 45
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,29 +164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9fccfe50cb2938f0800000000000000
-      internalID: -560368573403574373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero_BackAttack_Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 237
-        y: 0
-        width: 75
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88ce76eecde501740800000000000000
-      internalID: 5120697079305858184
+      spriteID: 2342d6c3b27f701e0800000000000000
+      internalID: -2231543325269351374
       vertices: []
       indices: 
       edges: []
