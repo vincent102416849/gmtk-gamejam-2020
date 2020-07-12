@@ -72,6 +72,8 @@ public class EnemyAnimationController : MonoBehaviour
 
     public void Attack()
     {
+        if (!gameObject.activeSelf)
+            return;
         if (animationCoroutine != null)
             StopCoroutine(animationCoroutine);
         animationCoroutine = StartCoroutine(AttackLoop());

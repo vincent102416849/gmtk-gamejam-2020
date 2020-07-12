@@ -47,8 +47,13 @@ public class EnemyMovementController : MonoBehaviour
 
     IEnumerator HuntingPlayerLoop()
     {
-        var target = FindObjectOfType<Player>();
-        yield return new WaitForSeconds(0f);
+        GameObject target = null;
+        while (target == null)
+        {
+            target = GameObject.FindGameObjectWithTag("Player");
+            yield return null;
+        }
+        
         while (true)
         {
             if (Vector3.Distance(transform.position, target.transform.position) > attackRangeThreshold)
@@ -68,7 +73,7 @@ public class EnemyMovementController : MonoBehaviour
                 isWalking = false;
                 rigidbody.velocity = Vector2.zero;
                 var attackData = new AttackData() { fallBack = 1f, fromPosition = transform.position, magic = 1f, strength = 1f };
-                target.ReceiveAttack(attackData);
+                target.GetComponent<Player>().ReceiveAttack(attackData);
                 enemyAnimationController.Attack();
                 yield return new WaitForSeconds(1f);
             }
