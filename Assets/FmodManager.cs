@@ -13,5 +13,6 @@ public class FmodManager : MonoBehaviour
         }
         FMODUnity.RuntimeManager.PlayOneShot("event:/Music");
         FMODUnity.RuntimeManager.PlayOneShot("event:/Ambience");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/TorchLoop");
     }
 }
