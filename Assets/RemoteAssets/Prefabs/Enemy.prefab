@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7280102667770831419}
   - component: {fileID: 7280102667770831417}
   - component: {fileID: 2177765974882360660}
+  - component: {fileID: 3812598677584919970}
   - component: {fileID: 7280102667770831418}
   - component: {fileID: 3998169729902350037}
   m_Layer: 10
@@ -99,6 +100,18 @@ MonoBehaviour:
   OnSuprise:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3812598677584919970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7280102667770831420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bddfd07a0a968ba469c4263b3e1caa5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &7280102667770831418
 BoxCollider:
   m_ObjectHideFlags: 0
