@@ -9,7 +9,16 @@ public class EnemySpawnController : MonoBehaviour
     public float spawnDelay;
     public List<Transform> enemySpawnPointList;
 
-    IEnumerator Start()
+    Coroutine SpawnRoutine;
+
+    void OnEnable()
+    {
+        if (SpawnRoutine != null)
+            StopCoroutine(SpawnRoutine);
+        SpawnRoutine = StartCoroutine(SpawnLoop());
+    }
+
+    IEnumerator SpawnLoop()
     {
         while (true)
         {
