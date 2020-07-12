@@ -26,10 +26,24 @@ public class EnemyAnimationController : MonoBehaviour
         while (true)
         {
             var targetAnimation = $"{enemy.orientation}";
-            print(targetAnimation);
             animator.Play(targetAnimation);
             yield return null;
         }
+    }
+
+    public void BeginAttacked()
+    {
+        if (animationCoroutine != null)
+            StopCoroutine(animationCoroutine);
+        animationCoroutine = StartCoroutine(BeingAttackLoop());
+    }
+
+    public IEnumerator BeingAttackLoop()
+    {
+        var targetAnimation = $"{enemy.orientation}_Hit";
+        animator.Play(targetAnimation);
+        yield return new WaitForSeconds(1f);
+        animationCoroutine = StartCoroutine(NormalLoop());
     }
 
     public void Attack()
@@ -37,7 +51,7 @@ public class EnemyAnimationController : MonoBehaviour
 
     }
 
-    public void OnAttackFinish()
+    public void AttackFinish()
     {
 
     }
