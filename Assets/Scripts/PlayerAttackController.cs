@@ -25,7 +25,8 @@ public class PlayerAttackController : MonoBehaviour
             foreach (var enemyGO in playerSwordDetector.targetGOList)
             {
                 var attackData = new AttackData() { fallBack = 5f, fromPosition = transform.position, magic = 1f, strength = player.attackPower };
-                enemyGO?.GetComponent<Enemy>().ReceiveAttack(attackData);
+                if (enemyGO != null)
+                    enemyGO.GetComponent<Enemy>().ReceiveAttack(attackData);
             }
             currentCoolDown = player.attackCooldown;
             OnAttack.Invoke(this);
