@@ -67,6 +67,7 @@ public class EnemyMovementController : MonoBehaviour
                 rigidbody.velocity = Vector2.zero;
                 var attackData = new AttackData() { fallBack = 1f, fromPosition = transform.position, magic = 1f, strength = 1f };
                 target.GetComponent<Player>().ReceiveAttack(attackData);
+                enemyAnimationController.Attack();
                 yield return new WaitForSeconds(1f);
             }
             yield return null;
