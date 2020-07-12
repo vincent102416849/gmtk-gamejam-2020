@@ -23,6 +23,7 @@ public class PlayerAttackController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerAttack", GetComponent<Transform>().position);
             foreach (var enemyGO in playerSwordDetector.targetGOList)
             {
                 var attackData = new AttackData() { fallBack = 5f, fromPosition = transform.position, magic = 1f, strength = player.attackPower };
@@ -33,7 +34,7 @@ public class PlayerAttackController : MonoBehaviour
             playerAnimationController.Attack();
             OnAttack.Invoke(this);
 
-            FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerAttack");
+            
         }
     }
 }

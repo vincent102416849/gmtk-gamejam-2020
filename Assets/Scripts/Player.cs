@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
             return;
         UpdateHealth(-attackData.strength);
         OnReceiveAttact.Invoke(attackData);
-        FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerDamage");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerDamage", GetComponent<Transform>().position);
     }
 
     public void UpdateHealth(float healthDelta)

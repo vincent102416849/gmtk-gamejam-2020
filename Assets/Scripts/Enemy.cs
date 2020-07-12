@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
             return;
         UpdateHealth(-attackData.strength);
         OnReceiveAttact.Invoke(attackData);
-        FMODUnity.RuntimeManager.PlayOneShot("event:/EnemyDamage");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/EnemyDamage", GetComponent<Transform>().position);
     }
 
     public void UpdateHealth(float healthDelta)
