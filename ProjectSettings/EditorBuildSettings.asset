@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/LandingScene.unity
     guid: c656020c8c253214382994dbf28178a4
   - enabled: 1
-    path: Assets/RemoteAssets/Scenes/Room_1.unity
+    path: Assets/RemoteAssets/Scenes/MainGame.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/RemoteAssets/Scenes/Credits.unity
+    guid: 85c28e1fd6feb2647b221a39808ae776
   m_configObjects: {}
