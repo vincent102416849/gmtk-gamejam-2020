@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyMovementController : MonoBehaviour
 {
     [Header("Display")]
+    public bool isWalking;
     public Coroutine enemyRoutine;
 
     [Header("Param")]
@@ -36,6 +37,7 @@ public class EnemyMovementController : MonoBehaviour
     {
         while (true)
         {
+            isWalking = false;
             yield return null;
         }
     }
@@ -49,10 +51,18 @@ public class EnemyMovementController : MonoBehaviour
             if (Vector3.Distance(transform.position, target.transform.position) > attackRangeThreshold)
             {
                 var direction = (target.transform.position - transform.position).normalized;
+
+                if (Mathf.Abs(direction.y) > 0.01f)
+                    enemy.orientation = direction.y > 0f ? Orientation.Back : Orientation.Front;
+                if (Mathf.Abs(direction.x) > 0.01f)
+                    enemy.orientation = direction.x > 0f ? Orientation.Right : Orientation.Left;
+
                 rigidbody.velocity = direction * enemy.moveSpeed;
+                isWalking = true;
             }
             else
             {
+                isWalking = false;
                 rigidbody.velocity = Vector2.zero;
                 var attackData = new AttackData() { fallBack = 1f, fromPosition = transform.position, magic = 1f, strength = 1f };
                 target.GetComponent<Player>().ReceiveAttack(attackData);
