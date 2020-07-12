@@ -3538,6 +3538,7 @@ MonoBehaviour:
   player: {fileID: 5428744422844693051}
   rigidbody: {fileID: 5428744422844693052}
   facingAnchor: {fileID: 921416198}
+  animator: {fileID: 0}
 --- !u!4 &5428744422923659671
 Transform:
   m_ObjectHideFlags: 0
