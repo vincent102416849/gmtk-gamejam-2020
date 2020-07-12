@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-guid: b1d6574eca5974de1adddebcad029bdf
+guid: 5848572d28a2d4276b7a2a8f709957cb
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -4164733427236487406
-    second: Enemy-Attack_Side_v2_0
-  - first:
-      213: 485913146986366224
-    second: Enemy-Attack_Side_v2_1
-  - first:
-      213: 7675547354673553239
-    second: Enemy-Attack_Side_v2_2
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -49,11 +40,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.9292647, y: 0.44854957}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -106,74 +97,11 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Enemy-Attack_Side_v2_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 93
-        height: 87
-      alignment: 9
-      pivot: {x: 0.28895122, y: 0.5096688}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21fbf5d7305e336c0800000000000000
-      internalID: -4164733427236487406
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy-Attack_Side_v2_1
-      rect:
-        serializedVersion: 2
-        x: 93
-        y: 3
-        width: 180
-        height: 84
-      alignment: 9
-      pivot: {x: 0.43301722, y: 0.4933241}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01580d5ce6f4eb600800000000000000
-      internalID: 485913146986366224
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy-Attack_Side_v2_2
-      rect:
-        serializedVersion: 2
-        x: 273
-        y: 0
-        width: 129
-        height: 87
-      alignment: 9
-      pivot: {x: 0.28264102, y: 0.48710844}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 75f910cf6a5058a60800000000000000
-      internalID: 7675547354673553239
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 09191006ba8ec4ef0b52717437155ce9
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
