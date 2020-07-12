@@ -15,7 +15,16 @@ public class RandomiseController : MonoBehaviour
 
     public GameEvent OnRandomise;
 
-    IEnumerator Start()
+    Coroutine randomiseCoroutine;
+
+    private void OnEnable()
+    {
+        if (randomiseCoroutine != null)
+            StopCoroutine(randomiseCoroutine);
+        randomiseCoroutine = StartCoroutine(RandomiseLoop());
+    }
+
+    IEnumerator RandomiseLoop()
     {
         while (true)
         {

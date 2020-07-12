@@ -35,7 +35,8 @@ public class Tutorials : MonoBehaviour
 
     public void OnStatusChanged()
     {
-        if (ignore0++ == 0)
+        print($"OnStatusChanged {ignore0}");
+        if (ignore0++ != 1)
             return;
         mainGame.SetActive(false);
         statusTutorial.SetActive(true);
@@ -43,12 +44,14 @@ public class Tutorials : MonoBehaviour
 
     public void OnStatusTutorialFinished()
     {
+        print($"OnStatusTutorialFinished");
         mainGame.SetActive(true);
         statusTutorial.SetActive(false);
     }
 
     public void OnPlayerDead()
     {
+        print($"OnPlayerDead");
         mainGame.SetActive(false);
         deathTutorial.SetActive(true);
     }
