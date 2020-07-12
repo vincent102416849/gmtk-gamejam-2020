@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMoveController : MonoBehaviour
 {
+    [Header("Header")]
+    public bool isWalking;
+
     [Header("Config")]
     public Player player;
     public new Rigidbody rigidbody;
@@ -16,7 +19,7 @@ public class PlayerMoveController : MonoBehaviour
         var vertical = Input.GetAxisRaw("Vertical");
         var velocity = new Vector3(horizontal, vertical, 0f) * player.moveSpeed;
         rigidbody.velocity = velocity;
-        animator.SetBool("walking", velocity.magnitude > 0.01f);
+        isWalking = velocity.magnitude > 0.01f;
         if (Mathf.Abs(vertical) > 0.01f)
         {
             facingAnchor.rotation = Quaternion.Euler(0f, 0f, vertical > 0f ? 90f : 270f);
