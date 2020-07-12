@@ -11,6 +11,7 @@ public class Tutorials : MonoBehaviour
     public GameObject deathTutorial;
 
     public int ignore0;
+    public bool stop;
 
     void Start()
     {
@@ -35,7 +36,7 @@ public class Tutorials : MonoBehaviour
 
     public void OnStatusChanged()
     {
-        if (ignore0++ != 1)
+        if (ignore0++ != 1 || stop)
             return;
         mainGame.SetActive(false);
         statusTutorial.SetActive(true);
@@ -55,6 +56,7 @@ public class Tutorials : MonoBehaviour
 
     public void OnPlayerDeadTutorialFinished()
     {
+        stop = true;
         mainGame.SetActive(true);
         Destroy(gameObject);
     }
