@@ -55,6 +55,6 @@ public class Tutorials : MonoBehaviour
 
     public void OnPlayerDeadTutorialFinished()
     {
-        SceneManager.LoadScene("LandingScene");
+        Destroy(gameObject);
     }
 }
