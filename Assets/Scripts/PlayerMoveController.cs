@@ -8,6 +8,7 @@ public class PlayerMoveController : MonoBehaviour
     public Player player;
     public new Rigidbody rigidbody;
     public Transform facingAnchor;
+    public Animator animator;
 
     void Update()
     {
@@ -15,6 +16,7 @@ public class PlayerMoveController : MonoBehaviour
         var vertical = Input.GetAxisRaw("Vertical");
         var velocity = new Vector3(horizontal, vertical, 0f) * player.moveSpeed;
         rigidbody.velocity = velocity;
+        animator.SetBool("walking", velocity.magnitude > 0.01f);
         if (Mathf.Abs(horizontal) > 0.01f)
             facingAnchor.rotation = Quaternion.Euler(0f, 0f, horizontal > 0f ? 0f : 180f);
         if (Mathf.Abs(vertical) > 0.01f)
