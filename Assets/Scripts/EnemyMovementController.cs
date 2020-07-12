@@ -65,9 +65,9 @@ public class EnemyMovementController : MonoBehaviour
             {
                 var direction = (target.transform.position - transform.position).normalized;
 
-                if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x))
+                if (Mathf.Abs(direction.x) > 0.01f)
                     enemy.orientation = direction.y > 0f ? Orientation.Back : Orientation.Front;
-                else
+                if (Mathf.Abs(direction.y) > 0.01f)
                     enemy.orientation = direction.x > 0f ? Orientation.Right : Orientation.Left;
 
                 rigidbody.velocity = direction * enemy.moveSpeed;
