@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Event")]
+    public bool isDead;
+
+    [Header("Param")]
     public float health;
     public float moveSpeed;
     public float detectRange;
@@ -14,6 +18,8 @@ public class Enemy : MonoBehaviour
 
     public void ReceiveAttack(AttackData attackData)
     {
+        if (isDead)
+            return;
         UpdateHealth(-attackData.strength);
         OnReceiveAttact.Invoke(attackData);
         FMODUnity.RuntimeManager.PlayOneShot("event:/EnemyDamage");
@@ -26,5 +32,12 @@ public class Enemy : MonoBehaviour
         health = Mathf.Clamp(health, 0f, 10f);
         if (Mathf.Approximately(health, 0f))
             OnHpZero.Invoke(this);
+    }
+
+    public void Die()
+    {
+        isDead = true;
+        gameObject.SetActive(false);
+        Destroy(gameObject, 2f);
     }
 }

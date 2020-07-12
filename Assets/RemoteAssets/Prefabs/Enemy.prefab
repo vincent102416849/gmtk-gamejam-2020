@@ -48,15 +48,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a33660ad7b7bcb49a9cfbce53d0786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDead: 0
   health: 5
   moveSpeed: 5
   detectRange: 2
   OnHpZero:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7280102667770831420}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 7280102667770831417}
+        m_MethodName: Die
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
