@@ -12,9 +12,12 @@ public class PlayerMoveController : MonoBehaviour
     public new Rigidbody rigidbody;
     public Transform facingAnchor;
     public Animator animator;
+    public bool footPlaying;
+    private FMOD.Studio.EventInstance instance;
 
     void Update()
     {
+        instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         var horizontal = Input.GetAxisRaw("Horizontal");
         var vertical = Input.GetAxisRaw("Vertical");
         var velocity = new Vector3(horizontal, vertical, 0f) * player.moveSpeed;
@@ -30,5 +33,22 @@ public class PlayerMoveController : MonoBehaviour
             facingAnchor.rotation = Quaternion.Euler(0f, 0f, horizontal > 0f ? 0f : 180f);
             player.orientation = horizontal > 0f ? Orientation.Right : Orientation.Left;
         }
+        if (isWalking)
+        {
+            if (!footPlaying)
+            {
+                instance.start();
+                footPlaying = true;
+            }
+        }
+        else
+        {
+            instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            footPlaying = false;
+        }
+    }
+    private void Start()
+    {
+        instance = FMODUnity.RuntimeManager.CreateInstance("event:/PlayerFootstep");
     }
 }
