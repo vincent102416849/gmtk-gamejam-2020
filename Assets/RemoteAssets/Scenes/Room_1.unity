@@ -3395,6 +3395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDead: 0
+  orientation: 0
   attackPower: 0
   health: 10
   moveSpeed: 5
