@@ -36,6 +36,11 @@ public class EnemyMovementController : MonoBehaviour
     //    enemyRoutine = StartCoroutine(HuntingPlayerLoop());
     //}
 
+    private void OnCollisionExit(Collision collision)
+    {
+        rigidbody.velocity = Vector3.zero;
+    }
+
     IEnumerator IdlingLoop()
     {
         while (true)
