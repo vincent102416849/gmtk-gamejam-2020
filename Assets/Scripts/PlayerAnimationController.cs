@@ -10,7 +10,7 @@ public class PlayerAnimationController : MonoBehaviour
     public Player player;
     public PlayerMoveController playerMoveController;
 
-    void Start()
+    void OnEnable()
     {
         animationCoroutine = StartCoroutine(NormalLoop());
     }

@@ -33,6 +33,8 @@ public class EnemyAnimationController : MonoBehaviour
 
     public void BeginAttacked()
     {
+        if (enemy.isDead)
+            return;
         if (animationCoroutine != null)
             StopCoroutine(animationCoroutine);
         animationCoroutine = StartCoroutine(BeingAttackLoop());
