@@ -72,7 +72,7 @@ public class EnemyAnimationController : MonoBehaviour
 
     public void Attack()
     {
-        if (!gameObject.activeSelf)
+        if (!gameObject.activeInHierarchy)
             return;
         if (animationCoroutine != null)
             StopCoroutine(animationCoroutine);
@@ -82,7 +82,6 @@ public class EnemyAnimationController : MonoBehaviour
     public IEnumerator AttackLoop()
     {
         var targetAnimation = $"{enemy.orientation}_Attack";
-        //print(targetAnimation);
         animator.Play(targetAnimation);
         yield return new WaitForSeconds(0.56f);
         animator.Play(lastAnim);
