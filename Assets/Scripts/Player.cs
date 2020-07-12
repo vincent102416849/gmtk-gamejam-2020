@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
 
     public void UpdateHealth(float healthDelta)
     {
-        print($"Player UpdateHealth {healthDelta}");
+        //print($"Player UpdateHealth {healthDelta}");
         health += healthDelta;
         health = Mathf.Clamp(health, 0f, 10f);
         playerAnimationController.GetHit();
