@@ -7,8 +7,8 @@ public class EnemyAnimationController : MonoBehaviour
     public Coroutine animationCoroutine;
 
     public Animator animator;
-    public Player player;
-    public PlayerMoveController playerMoveController;
+    public Enemy enemy;
+    public EnemyMovementController enemyMovementController;
 
     void Start()
     {
@@ -25,14 +25,25 @@ public class EnemyAnimationController : MonoBehaviour
     {
         while (true)
         {
-            if (playerMoveController.isWalking)
-            {
-                var targetAnimation = $"Hero_{player.orientation}Walk";
-                print(targetAnimation);
-                animator.Play(targetAnimation);
-            }
+            var targetAnimation = $"{enemy.orientation}";
+            animator.Play(targetAnimation);
             yield return null;
         }
+    }
+
+    public void BeginAttacked()
+    {
+        if (animationCoroutine != null)
+            StopCoroutine(animationCoroutine);
+        animationCoroutine = StartCoroutine(BeingAttackLoop());
+    }
+
+    public IEnumerator BeingAttackLoop()
+    {
+        var targetAnimation = $"{enemy.orientation}_Hit";
+        animator.Play(targetAnimation);
+        yield return new WaitForSeconds(1f);
+        animationCoroutine = StartCoroutine(NormalLoop());
     }
 
     public void Attack()
@@ -40,7 +51,7 @@ public class EnemyAnimationController : MonoBehaviour
 
     }
 
-    public void OnAttackFinish()
+    public void AttackFinish()
     {
 
     }

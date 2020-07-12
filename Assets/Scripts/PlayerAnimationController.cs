@@ -10,7 +10,7 @@ public class PlayerAnimationController : MonoBehaviour
     public Player player;
     public PlayerMoveController playerMoveController;
 
-    void Start()
+    void OnEnable()
     {
         animationCoroutine = StartCoroutine(NormalLoop());
     }
@@ -28,7 +28,7 @@ public class PlayerAnimationController : MonoBehaviour
             if (playerMoveController.isWalking)
             {
                 var targetAnimation = $"Hero_{player.orientation}Walk";
-                print(targetAnimation);
+                //print(targetAnimation);
                 animator.Play(targetAnimation);
             }
             yield return null;
