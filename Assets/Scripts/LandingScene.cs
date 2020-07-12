@@ -14,8 +14,8 @@ public class LandingScene : MonoBehaviour
 
     public void Play()
     {
-      Debug.Log("Play button pressed");
-      StartCoroutine(FadeOutRoutine(Text1));
+        print($"akaCK1");
+        SceneManager.LoadScene($"MainGame");
     }
 
     public void Option()
@@ -25,13 +25,6 @@ public class LandingScene : MonoBehaviour
 
     public void Credit()
     {
-
+        SceneManager.LoadScene($"Credits");
     }
-
-    private IEnumerator FadeOutRoutine(GameObject card) {
-      card.SetActive(true);
-      Image image = card.GetComponent<Image>();
-      image.color = new Color(1f,1f,1f,1f);
-      yield return null;
-   }
 }
