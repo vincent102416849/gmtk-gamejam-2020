@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Orientation { 
+    Front, Back, Left, Right
+}
+
+
 public class Player : MonoBehaviour
 {
     [Header("Display")]
     public bool isDead;
+    public Orientation orientation;
 
     [Header("Param")]
     public float attackPower;
@@ -37,7 +43,6 @@ public class Player : MonoBehaviour
             OnHpZero.Invoke(this);
             FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerDeath");
         }
-        
     }
 
     public void Die()
