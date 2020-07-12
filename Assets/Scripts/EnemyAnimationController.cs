@@ -10,6 +10,7 @@ public class EnemyAnimationController : MonoBehaviour
     public Enemy enemy;
     public EnemyMovementController enemyMovementController;
     private string lastAnim;
+    public SpriteRenderer spriteRenderer;
 
     void OnEnable()
     {
@@ -44,10 +45,29 @@ public class EnemyAnimationController : MonoBehaviour
 
     public IEnumerator BeingAttackLoop()
     {
+        if (enemy.isDead)
+            yield break;
         var targetAnimation = $"{enemy.orientation}_Hit";
         animator.Play(targetAnimation);
+        StartCoroutine(BeginAttackLoop());
         yield return new WaitForSeconds(1f);
         animationCoroutine = StartCoroutine(NormalLoop());
+    }
+
+    IEnumerator BeginAttackLoop()
+    {
+        var startTime = Time.time;
+        var lerpValue = 1f;
+        while (Time.time - startTime < 1f)
+        {
+            if (lerpValue == 0f)
+                lerpValue = 1f - (Time.time - startTime);
+            else
+                lerpValue = 0f;
+            var targetColor = Color.Lerp(Color.white, new Color(1f, 0.4f, 0.4f), lerpValue);
+            spriteRenderer.color = targetColor;
+            yield return new WaitForSeconds(0.06f);
+        }
     }
 
     public void Attack()

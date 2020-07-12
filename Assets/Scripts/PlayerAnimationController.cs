@@ -74,7 +74,7 @@ public class PlayerAnimationController : MonoBehaviour
                 lerpValue = 1f - (Time.time - startTime);
             else
                 lerpValue = 0f;
-            var targetColor = Color.Lerp(Color.white, new Color(0.6f, 0f, 0f), lerpValue);
+            var targetColor = Color.Lerp(Color.white, new Color(1f, 0.4f, 0.4f), lerpValue);
             spriteRenderer.color = targetColor;
             yield return new WaitForSeconds(0.06f);
         }
