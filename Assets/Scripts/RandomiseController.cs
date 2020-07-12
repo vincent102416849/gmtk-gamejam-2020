@@ -13,6 +13,8 @@ public class RandomiseController : MonoBehaviour
     public float randomiseTime;
     public float countDown;
 
+    public GameEvent OnRandomise;
+
     IEnumerator Start()
     {
         while (true)
@@ -36,5 +38,6 @@ public class RandomiseController : MonoBehaviour
         player.moveSpeed = (int) Random.Range(2f, 8f);
         debugText.SetText($"Randomise\nplayer.attackPower:{player.attackPower:0}\nplayer.moveSpeed:{player.moveSpeed }");
         FMODUnity.RuntimeManager.PlayOneShot("event:/StatsReset");
+        OnRandomise.Invoke(this);
     }
 }

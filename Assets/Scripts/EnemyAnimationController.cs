@@ -11,15 +11,17 @@ public class EnemyAnimationController : MonoBehaviour
     public EnemyMovementController enemyMovementController;
     private string lastAnim;
 
-    void Start()
+    void OnEnable()
     {
+        if (animationCoroutine != null)
+            StopCoroutine(animationCoroutine);
         animationCoroutine = StartCoroutine(NormalLoop());
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-
+        if (animationCoroutine != null)
+            StopCoroutine(animationCoroutine);
     }
 
     public IEnumerator NormalLoop()

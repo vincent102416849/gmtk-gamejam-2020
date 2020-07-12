@@ -26,6 +26,18 @@ public class EnemyMovementController : MonoBehaviour
         enemyRoutine = StartCoroutine(IdlingLoop());
     }
 
+    //void OnEnable()
+    //{
+    //    if (enemySensorDetector.targetGOList.Count > 0)
+    //        DetectedPlayer();
+    //}
+
+    //private void OnDisable()
+    //{
+    //    if (enemyRoutine != null)
+    //        StopCoroutine(enemyRoutine);
+    //}
+
     public void DetectedPlayer()
     {
         OnSuprise.Invoke(this);

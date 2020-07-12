@@ -26,4 +26,10 @@ public class LandingScene : MonoBehaviour
     {
         SceneManager.LoadScene($"Credits");
     }
+
+    [ContextMenu("ResetIT")]
+    public void ResetIT()
+    {
+        PlayerPrefs.SetInt("it", 0);
+    }
 }

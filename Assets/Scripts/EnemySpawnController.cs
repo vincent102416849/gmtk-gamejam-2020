@@ -20,7 +20,7 @@ public class EnemySpawnController : MonoBehaviour
             if (trial-- > 0 && hits.Count() > 0)
                 goto RESPAWN;
 
-            var newEnemy = Instantiate(enemyPrefab);
+            var newEnemy = Instantiate(enemyPrefab, transform);
             newEnemy.transform.position = spawnTransform.position;
             yield return new WaitForSeconds(spawnDelay);
         }
