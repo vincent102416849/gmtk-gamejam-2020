@@ -21,30 +21,20 @@ public class EnemyMovementController : MonoBehaviour
     [Header("Event")]
     public GameEvent OnSuprise;
 
-    void Start()
+    void OnEnable()
     {
-        enemyRoutine = StartCoroutine(IdlingLoop());
-    }
-
-    //void OnEnable()
-    //{
-    //    if (enemySensorDetector.targetGOList.Count > 0)
-    //        DetectedPlayer();
-    //}
-
-    //private void OnDisable()
-    //{
-    //    if (enemyRoutine != null)
-    //        StopCoroutine(enemyRoutine);
-    //}
-
-    public void DetectedPlayer()
-    {
-        OnSuprise.Invoke(this);
         if (enemyRoutine != null)
             StopCoroutine(enemyRoutine);
         enemyRoutine = StartCoroutine(HuntingPlayerLoop());
     }
+
+    //public void DetectedPlayer()
+    //{
+    //    OnSuprise.Invoke(this);
+    //    if (enemyRoutine != null)
+    //        StopCoroutine(enemyRoutine);
+    //    enemyRoutine = StartCoroutine(HuntingPlayerLoop());
+    //}
 
     IEnumerator IdlingLoop()
     {
@@ -57,7 +47,7 @@ public class EnemyMovementController : MonoBehaviour
 
     IEnumerator HuntingPlayerLoop()
     {
-        var target = enemySensorDetector.targetGOList.First();
+        var target = FindObjectOfType<Player>();
         yield return new WaitForSeconds(0f);
         while (true)
         {
@@ -66,9 +56,9 @@ public class EnemyMovementController : MonoBehaviour
                 var direction = (target.transform.position - transform.position).normalized;
 
                 if (Mathf.Abs(direction.x) > 0.01f)
-                    enemy.orientation = direction.y > 0f ? Orientation.Back : Orientation.Front;
-                if (Mathf.Abs(direction.y) > 0.01f)
                     enemy.orientation = direction.x > 0f ? Orientation.Right : Orientation.Left;
+                if (Mathf.Abs(direction.y) > 0.01f)
+                    enemy.orientation = direction.y > 0f ? Orientation.Back : Orientation.Front;
 
                 rigidbody.velocity = direction * enemy.moveSpeed;
                 isWalking = true;
@@ -78,7 +68,7 @@ public class EnemyMovementController : MonoBehaviour
                 isWalking = false;
                 rigidbody.velocity = Vector2.zero;
                 var attackData = new AttackData() { fallBack = 1f, fromPosition = transform.position, magic = 1f, strength = 1f };
-                target.GetComponent<Player>().ReceiveAttack(attackData);
+                target.ReceiveAttack(attackData);
                 enemyAnimationController.Attack();
                 yield return new WaitForSeconds(1f);
             }
