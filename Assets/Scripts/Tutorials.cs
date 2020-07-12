@@ -55,6 +55,7 @@ public class Tutorials : MonoBehaviour
 
     public void OnPlayerDeadTutorialFinished()
     {
+        mainGame.SetActive(true);
         Destroy(gameObject);
     }
 }
