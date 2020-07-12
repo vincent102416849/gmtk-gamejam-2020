@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     public float attackRange;
     public float attackCooldown;
 
+    public PlayerAnimationController playerAnimationController;
+
     [Header("Event")]
     public GameEvent OnHpZero;
     public GameEvent OnReceiveAttact;
@@ -38,6 +40,7 @@ public class Player : MonoBehaviour
         print($"Player UpdateHealth {healthDelta}");
         health += healthDelta;
         health = Mathf.Clamp(health, 0f, 10f);
+        playerAnimationController.GetHit();
         if (Mathf.Approximately(health, 0f))
         {
             OnHpZero.Invoke(this);
