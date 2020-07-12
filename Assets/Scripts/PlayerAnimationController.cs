@@ -12,6 +12,8 @@ public class PlayerAnimationController : MonoBehaviour
     public PlayerMoveController playerMoveController;
     public SpriteRenderer spriteRenderer;
 
+    public string lastAnim;
+
     void OnEnable()
     {
         animationCoroutine = StartCoroutine(NormalLoop());
@@ -30,6 +32,7 @@ public class PlayerAnimationController : MonoBehaviour
             if (playerMoveController.isWalking)
             {
                 var targetAnimation = $"Hero_{player.orientation}Walk";
+                lastAnim = targetAnimation;
                 //print(targetAnimation);
                 animator.Play(targetAnimation);
             }
@@ -39,12 +42,19 @@ public class PlayerAnimationController : MonoBehaviour
 
     public void Attack()
     {
-
+        if (animationCoroutine != null)
+            StopCoroutine(animationCoroutine);
+        animationCoroutine = StartCoroutine(AttackLoop());
     }
 
-    public void OnAttackFinish()
+    public IEnumerator AttackLoop()
     {
-
+        var targetAnimation = $"Hero_{player.orientation}Attack";
+        //print(targetAnimation);
+        animator.Play(targetAnimation);
+        yield return new WaitForSeconds(0.56f);
+        animator.Play(lastAnim);
+        animationCoroutine = StartCoroutine(NormalLoop());
     }
 
     public void GetHit()

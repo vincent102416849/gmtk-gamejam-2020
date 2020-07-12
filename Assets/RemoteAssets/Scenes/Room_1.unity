@@ -3391,6 +3391,8 @@ MonoBehaviour:
   animator: {fileID: 5428744422844692994}
   player: {fileID: 5428744422844693051}
   playerMoveController: {fileID: 5428744422844693055}
+  spriteRenderer: {fileID: 5428744423294583842}
+  lastAnim: 
 --- !u!95 &5428744422844692994
 Animator:
   serializedVersion: 3
@@ -3448,6 +3450,7 @@ MonoBehaviour:
   moveSpeed: 5
   attackRange: 1
   attackCooldown: 0.6
+  playerAnimationController: {fileID: 5428744422844692993}
   OnHpZero:
     m_PersistentCalls:
       m_Calls:

@@ -6,7 +6,6 @@ public enum Orientation {
     Front, Back, Left, Right
 }
 
-
 public class Player : MonoBehaviour
 {
     [Header("Display")]

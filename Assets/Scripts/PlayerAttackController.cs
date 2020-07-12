@@ -33,8 +33,6 @@ public class PlayerAttackController : MonoBehaviour
             currentCoolDown = player.attackCooldown;
             playerAnimationController.Attack();
             OnAttack.Invoke(this);
-
-            
         }
     }
 }

@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 1728599e318f9ac4484858ccd7f490fa
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6889899822671314600
+    second: Hero_Front-Attack_Sheet_0
+  - first:
+      213: 3960813317641577761
+    second: Hero_Front-Attack_Sheet_1
+  - first:
+      213: 2140597612498155107
+    second: Hero_Front-Attack_Sheet_2
+  - first:
+      213: 8788762526482819544
+    second: Hero_Front-Attack_Sheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +133,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Hero_Front-Attack_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 81
+        height: 105
+      alignment: 9
+      pivot: {x: 0.34552073, y: 0.43615916}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85146a39d982260a0800000000000000
+      internalID: -6889899822671314600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Front-Attack_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 0
+        width: 150
+        height: 123
+      alignment: 9
+      pivot: {x: 0.6012943, y: 0.52906585}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125a9a32ab2a7f630800000000000000
+      internalID: 3960813317641577761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Front-Attack_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 15
+        width: 159
+        height: 108
+      alignment: 9
+      pivot: {x: 0.6939317, y: 0.45862162}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366700cef2ee4bd10800000000000000
+      internalID: 2140597612498155107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Front-Attack_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 15
+        width: 159
+        height: 108
+      alignment: 9
+      pivot: {x: 0.6883103, y: 0.46689734}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9e546f3f4f7f970800000000000000
+      internalID: 8788762526482819544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
